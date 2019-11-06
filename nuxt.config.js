@@ -31,6 +31,7 @@ module.exports = {
   */
   plugins: [],
 
+  buildModules: ['@nuxt/typescript-build'],
   /*
   ** Nuxt.js modules
   */
