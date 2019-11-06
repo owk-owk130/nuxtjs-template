@@ -9,11 +9,15 @@ module.exports = {
   },
   extends: [
     '@nuxtjs',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    '@nuxtjs/eslint-config-typescript'
   ],
   plugins: [
     'prettier'
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+      'indent': ['error', 4],
+      'space-before-function-paren': ['error', 'never'],
+  }
 }
