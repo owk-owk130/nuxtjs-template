@@ -15,9 +15,14 @@ module.exports = {
   plugins: [
     'prettier'
   ],
-  // add your custom rules here
   rules: {
       'indent': ['error', 4],
       'space-before-function-paren': ['error', 'never'],
+      'vue/html-self-closing': [ 'error', {
+          'html': {
+              'void': 'always',
+              'normal': 'never',
+          }
+      }],
   }
 }
