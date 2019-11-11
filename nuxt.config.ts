@@ -4,10 +4,6 @@ const pkg = require('./package')
 
 const nuxtConfig: Configuration = {
     mode: 'universal',
-
-    /*
-  ** Headers of the page
-  */
     head: {
         title: pkg.name,
         meta: [
@@ -24,53 +20,30 @@ const nuxtConfig: Configuration = {
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     },
-
-    /*
-  ** Customize the progress-bar color
-  */
     loading: { color: '#fff' },
-
-    /*
-  ** Global CSS
-  */
     css: [],
-
-    /*
-  ** Plugins to load before mounting the App
-  */
     plugins: [],
-
-    buildModules: ['@nuxt/typescript-build'],
-    /*
-  ** Nuxt.js modules
-  */
-    modules: [
-        // Doc: https://axios.nuxtjs.org/usage
-        '@nuxtjs/axios'
+    buildModules: [
+        [
+            '@nuxt/typescript-build',
+            {
+                typeCheck: true,
+                ignoreNotFoundWarnings: true
+            }
+        ]
     ],
-    /*
-  ** Axios module configuration
-  */
-    axios: {
-        // See https://github.com/nuxt-community/axios-module#options
-    },
-
-    /*
-  ** Build configuration
-  */
+    modules: ['@nuxtjs/axios'],
+    axios: {},
     build: {
-        /*
-    ** You can extend webpack config here
-    */
-        extend(config, ctx) {
+        extend(config: any, ctx) {
             // Run ESLint on save
             if (ctx.isDev && ctx.isClient) {
-                // config.module.rules.push({
-                //     enforce: 'pre',
-                //     test: /\.(js|vue)$/,
-                //     loader: 'eslint-loader',
-                //     exclude: /(node_modules)/
-                // })
+                config.module.rules.push({
+                    enforce: 'pre',
+                    test: /\.(js|vue)$/,
+                    loader: 'eslint-loader',
+                    exclude: /(node_modules)/
+                })
             }
         }
     }
