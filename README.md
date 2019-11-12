@@ -1,5 +1,7 @@
 # nuxtjs-template
 
+This template can use Typescript, Stylus
+
 > nuxtjs-template
 
 ## Build Setup
@@ -17,6 +19,13 @@ $ yarn start
 
 # generate static project
 $ yarn run generate
+
+# linter
+$ yarn lint
+
+# formatter
+$ yarn lintfix
+
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

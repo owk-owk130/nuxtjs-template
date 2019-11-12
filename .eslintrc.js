@@ -13,7 +13,7 @@ module.exports = {
     '@nuxtjs/eslint-config-typescript'
   ],
   plugins: [
-    'prettier'
+    'prettier',
   ],
   rules: {
       'indent': ['error', 4],
@@ -24,5 +24,7 @@ module.exports = {
               'normal': 'never',
           }
       }],
+      'vue/html-indent': ['error', 4],
+      'vue/singleline-html-element-content-newline': 'off'
   }
 }
