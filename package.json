@@ -10,14 +10,14 @@
         "generate": "nuxt-ts generate",
         "start": "nuxt-ts start",
         "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
-        "lintfix": "eslint --ext .js,.ts,.vue --quiet --fix",
-        "precommit": "npm run lint"
+        "lintfix": "eslint --ext .js,.ts,.vue --quiet --fix"
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.3.6",
         "@types/node": "^12.12.6",
         "cross-env": "^5.2.0",
         "nuxt": "^2.3.4",
+        "nuxt-typed-vuex": "^0.1.10",
         "stylus": "^0.54.7",
         "stylus-loader": "^3.0.2"
     },

@@ -1,19 +1,25 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+    <div>
+        <nuxt />
+    </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapState } from 'vuex'
+
 export default Vue.extend({
     data() {
         return {
             message: 'This is a message'
         }
     },
+    computed: {
+        ...mapState(['hello'])
+    },
     mounted() {
         this.foo()
+        this.$store.dispatch('hello/sendName', 'world')
     },
     methods: {
         foo() {
