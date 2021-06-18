@@ -1,31 +1,14 @@
 # nuxtjs-template
 
-This template can use Typescript, Stylus
+## 開発環境
+フレームワーク: Nuxt.js  
+開発言語: Typescript  
+CSS: scss  
+Store: [nuxt-typed-vuex](https://typed-vuex.roe.dev/getting-started/getting-started-nuxt)
 
-> nuxtjs-template
+## 使い方
+// install node_modules  
+`$ yarn`
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
-
-# linter
-$ yarn lint
-
-# formatter
-$ yarn lintfix
-
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+//dev app  
+`$ yarn dev`
