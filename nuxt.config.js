@@ -13,9 +13,12 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   css: [],
+  styleResources: {
+    scss: ["./assets/scss/*.scss"],
+  },
   plugins: [],
   components: true,
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/style-resources"],
   modules: ["@nuxtjs/axios"],
   axios: {},
   build: {},

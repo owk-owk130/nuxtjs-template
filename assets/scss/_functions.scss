@@ -1,0 +1,13 @@
+@function image-url($path) {
+  @return url("~assets/image/#{$path}");
+}
+
+// pxをvwに変換
+@function pxToVw($value) {
+  @return $value / $pc_width * 100 + vw;
+}
+
+// pxをvhに変換
+@function pxToVh($value) {
+  @return $value / $pc_height * 100 + vh;
+}

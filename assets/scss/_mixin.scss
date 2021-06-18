@@ -1,0 +1,84 @@
+@mixin pc-layout {
+  @media screen and (min-width: $sp-max-width + 1) and (hover: hover) and (pointer: fine) {
+    @content
+  }
+};
+
+@mixin sp-layout {
+  @media screen and (max-width: $sp-max-width) and (hover: none) and (pointer: coarse) {
+    @content
+  }
+};
+
+@mixin background-image($url, $size: contain) {
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-size: $size;
+};
+
+@mixin cancel-blurred() {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@mixin absolute-center-x() {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0)
+};
+
+@mixin absolute-center-y() {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%)
+};
+
+@mixin absolute-center-xy() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+};
+
+// z-indexを取得
+@mixin z-index($key) {
+  z-index: map-get($z, $key);
+}
+
+@mixin sdgs-color($key) {
+  background-color: map-get($sdg-colors, $key)
+}
+
+@mixin hidden-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// CSSのmin()関数
+@function min($values...) {
+  @return unquote('min(#{$values})');
+}
+
+@mixin flex-center {
+  display: flex;
+  vertical-align: center;
+  justify-content: center;
+  align-items: center;
+};
+
+@mixin common-top-font-layout {
+  font-size: 25px;
+  line-height: 60px;
+  letter-spacing: 6px;
+}
+
+@mixin hover-opacity {
+  transition-duration: 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}
