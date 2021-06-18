@@ -18,7 +18,11 @@ export default {
   },
   plugins: [],
   components: true,
-  buildModules: ["@nuxt/typescript-build", "@nuxtjs/style-resources"],
+  buildModules: [
+    "@nuxt/typescript-build",
+    "@nuxtjs/style-resources",
+    "nuxt-typed-vuex",
+  ],
   modules: ["@nuxtjs/axios"],
   axios: {},
   build: {},

@@ -2087,6 +2087,11 @@ acorn@^8.0.4:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.0.tgz#af53266e698d7cffa416714b503066a82221be60"
   integrity sha512-ULr0LDaEqQrMFGyQ3bhJkLsbtrQ8QibAseGZeaSUiT/6zb9IvIkomWHJIvgvwad+hinRAgsI51JcWk2yvwyL+w==
 
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
+
 aggregate-error@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.1.0.tgz#92670ff50f5359bdb7a3e0d40d0ec30c5737687a"
@@ -6569,6 +6574,14 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+nuxt-typed-vuex@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nuxt-typed-vuex/-/nuxt-typed-vuex-0.2.0.tgz#989ff05bf30aa10bc82456f03cf5645bc9621e3a"
+  integrity sha512-c+6LRuwv4aox0aarAccd5zdd3tWOBDxbc32VRLeVpAt//ZG8Lcutt4Xc067iyRaquOashkJvQ8//Ko18EaySTw==
+  dependencies:
+    typed-vuex "0.2.0"
+    upath "^2.0.1"
+
 nuxt@^2.15.3:
   version "2.15.7"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.15.7.tgz#45332e3b00ba5c1cf04688d42373c8ed7ef4dca7"
@@ -9348,6 +9361,11 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
+typed-vuex@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/typed-vuex/-/typed-vuex-0.2.0.tgz#1c1b60150926a764c0a5a2d5eb6620ef8e9096aa"
+  integrity sha512-0JZJBcQiXJq4TnQh0W3sdZzTnwUiHO0AygttInsXO8BZ4eRTbNRmldKDIzsgA7WRlVi+pJ8oAKDlDDpkx0Ilpg==
+
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
@@ -10009,6 +10027,11 @@ yargs@^15.3.1:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yarn@^1.22.10:
+  version "1.22.10"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+  integrity sha512-IanQGI9RRPAN87VGTF7zs2uxkSyQSrSPsju0COgbsKQOOXr5LtcVPeyXWgwVa0ywG3d8dg6kSYKGBuYK021qeA==
 
 yocto-queue@^0.1.0:
   version "0.1.0"

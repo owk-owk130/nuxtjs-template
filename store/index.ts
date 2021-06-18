@@ -1,24 +1,45 @@
-import { GetterTree, ActionTree, MutationTree } from "vuex";
+import {
+  getAccessorType,
+  getterTree,
+  mutationTree,
+  actionTree,
+} from "typed-vuex";
 
-export const state = () => ({
-  things: [] as string[],
+type IndexState = {
+  things: string[];
+  name: string;
+};
+
+export const state = (): IndexState => ({
+  things: [],
   name: "Me",
 });
 
 export type RootState = ReturnType<typeof state>;
 
-export const getters: GetterTree<RootState, RootState> = {
+export const getters = getterTree(state, {
   name: (state) => state.name,
-};
+});
 
-export const mutations: MutationTree<RootState> = {
+export const mutations = mutationTree(state, {
   CHANGE_NAME: (state, newName: string) => (state.name = newName),
-};
+});
 
-export const actions: ActionTree<RootState, RootState> = {
-  fetchThings({ commit }) {
-    const things = this.$axios.$get("/things");
-    console.log(things);
-    commit("CHANGE_NAME", "New name");
+export const actions = actionTree(
+  { state, getters, mutations },
+  {
+    fetchThings({ commit }) {
+      const things = this.$axios.$get("/things");
+      console.log(things);
+      commit("CHANGE_NAME", "New name");
+    },
   },
-};
+);
+
+export const accessorType = getAccessorType({
+  state,
+  getters,
+  mutations,
+  actions,
+  modules: {},
+});
