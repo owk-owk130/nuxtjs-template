@@ -6,32 +6,26 @@ import {
 } from "typed-vuex";
 
 type IndexState = {
-  things: string[];
-  name: string;
+  count: number;
 };
 
 export const state = (): IndexState => ({
-  things: [],
-  name: "Me",
+  count: 0,
 });
 
-export type RootState = ReturnType<typeof state>;
-
 export const getters = getterTree(state, {
-  name: (state) => state.name,
+  count: (state) => state.count,
 });
 
 export const mutations = mutationTree(state, {
-  CHANGE_NAME: (state, newName: string) => (state.name = newName),
+  setCount: (state, newNumber: number) => (state.count = newNumber),
 });
 
 export const actions = actionTree(
   { state, getters, mutations },
   {
-    fetchThings({ commit }) {
-      const things = this.$axios.$get("/things");
-      console.log(things);
-      commit("CHANGE_NAME", "New name");
+    countPlus({ state, commit }) {
+      commit("setCount", state.count + 1);
     },
   },
 );
