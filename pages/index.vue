@@ -3,24 +3,8 @@
     <div>
       <Logo />
       <h1 class="title">nuxtjs-template</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <p>{{ count }}</p>
+      <button @click="setCount">countup</button>
     </div>
   </div>
 </template>
@@ -29,8 +13,18 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  computed: {
+    count() {
+      return this.$accessor.count;
+    },
+  },
   mounted() {
-    console.log(this.$store.state.name);
+    console.log(this.$accessor.count);
+  },
+  methods: {
+    setCount() {
+      this.$accessor.countPlus();
+    },
   },
 });
 </script>
