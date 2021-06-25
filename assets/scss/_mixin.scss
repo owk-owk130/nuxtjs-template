@@ -57,6 +57,33 @@
   }
 }
 
+@mixin text($size, $lineHeight, $letterSpacing) {
+  font-size: $size / 2 * 1px;
+  line-height: $lineHeight / $size;
+  letter-spacing: $letterSpacing / 1000 * 0.5em;
+  // 一行目のlineHeightを打ち消す者
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$lineHeight / $size}) * 0.5em);
+    content: '';
+  }
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: calc((1 - #{$lineHeight / $size}) * 0.5em);
+    content: '';
+  }
+}
+
+@mixin sptext($size, $lineheight, $letterSpacing: normal) {
+  font-size: sp-convert($size / 2);
+  line-height: $lineheight;
+  letter-spacing: $letterSpacing;
+}
+
 // CSSのmin()関数
 @function min($values...) {
   @return unquote('min(#{$values})');
