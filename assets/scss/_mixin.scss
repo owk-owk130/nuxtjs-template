@@ -45,10 +45,6 @@
   z-index: map-get($z, $key);
 }
 
-@mixin sdgs-color($key) {
-  background-color: map-get($sdg-colors, $key)
-}
-
 @mixin hidden-scroll-bar {
   -ms-overflow-style: none;
   scrollbar-width: none;

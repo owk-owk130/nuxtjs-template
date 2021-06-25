@@ -1,3 +1,9 @@
-$pc_width: 1920;
-$pc_height: 940;
-$sp_width: 375;
+$sp-max-width: 768;
+$pc-width: 1920;
+$pc-height: 940;
+$sp-width: 375;
+
+//z-index
+$z: (
+  sample: 1
+);
